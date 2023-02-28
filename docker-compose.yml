@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres_library
+    environment:
+      POSTGRES_USER: unforgettable
+      POSTGRES_PASSWORD: 27092100
+      POSTGRES_DB: library_security
+    #    volumes:
+    #      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    #    networks:
+    #      - postgres
+    restart: unless-stopped
